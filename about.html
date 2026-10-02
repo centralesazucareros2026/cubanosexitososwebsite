@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Cubanos Exitosos en el Mundo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Georgia', serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        
+        nav {
+            background: #0d0d0d;
+            padding: 20px 0;
+            border-bottom: 3px solid #D4AF7E;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #D4AF7E;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: #D4AF7E;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffffff;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #D4AF7E;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5em;
+            color: #D4AF7E;
+            margin-bottom: 20px;
+        }
+        
+        .page-header p {
+            font-size: 1.3em;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .content-section {
+            background: #2a2a2a;
+            padding: 50px;
+            border: 3px solid #D4AF7E;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+        
+        .content-section h2 {
+            font-size: 2.5em;
+            color: #D4AF7E;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #1a3a2e;
+            padding-bottom: 15px;
+        }
+        
+        .content-section p {
+            font-size: 1.2em;
+            color: #d0d0d0;
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        
+        .mission-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .value-box {
+            background: #1f1f1f;
+            padding: 35px;
+            border-left: 5px solid #D4AF7E;
+            border-radius: 5px;
+        }
+        
+        .value-box h3 {
+            font-size: 1.8em;
+            color: #D4AF7E;
+            margin-bottom: 15px;
+        }
+        
+        .value-box p {
+            font-size: 1.1em;
+            color: #d0d0d0;
+            line-height: 1.7;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
+            padding: 50px;
+            border: 3px double #D4AF7E;
+            border-radius: 10px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .quote-box blockquote {
+            font-size: 2em;
+            font-style: italic;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .quote-box cite {
+            font-size: 1.2em;
+            color: #D4AF7E;
+        }
+        
+        .team-section {
+            margin: 60px 0;
+        }
+        
+        .team-section h2 {
+            font-size: 2.5em;
+            color: #D4AF7E;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .team-section p {
+            font-size: 1.2em;
+            color: #d0d0d0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background: #0d0d0d;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 3px solid #D4AF7E;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            color: #888;
+            margin: 10px 0;
+        }
+        
+        footer strong {
+            color: #D4AF7E;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.5em; }
+            .content-section { padding: 30px 20px; }
+            .mission-values { grid-template-columns: 1fr; }
+            nav ul { gap: 15px; font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="container">
+            <div class="logo">🇨🇺 Cubanos Exitosos</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="youtube.html">YouTube</a></li>
+                <li><a href="tiktok.html">TikTok</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="revista.html">Revista</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://forms.gle/eJWaFpi6RSA6Wp266">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="page-header">
+        <h1>Sobre Nosotros</h1>
+        <p>Nuestra misión de preservar y celebrar el legado del éxito cubano</p>
+    </div>
+    
+    <div class="container">
+        
+        <div class="content-section">
+            <h2>Nuestra Historia</h2>
+            <p>
+                Cubanos Exitosos nació en 2025 con una misión clara: documentar, preservar y 
+                celebrar las historias de cubanos que han alcanzado la excelencia en sus campos 
+                alrededor del mundo. Lo que comenzó como un blog modesto se ha convertido en la 
+                plataforma digital más completa sobre el éxito cubano global.
+            </p>
+            <p>
+                Desde artistas que revolucionaron la música mundial hasta científicos que avanzan 
+                las fronteras del conocimiento, desde empresarios que construyeron imperios hasta 
+                deportistas que conquistaron podios olímpicos, cada historia que documentamos es 
+                un testimonio del talento, perseverancia y espíritu indomable del pueblo cubano.
+            </p>
+            <p>
+                Hoy contamos con más de 129 artículos publicados, una revista trimestral, canal 
+                de YouTube, presencia activa en redes sociales y una comunidad global de lectores 
+                que comparten nuestra pasión por estas historias inspiradoras.
+            </p>
+        </div>
+        
+        <div class="quote-box">
+            <blockquote>
+                "Nuestro objetivo no es solo contar historias de éxito, sino inspirar a las 
+                próximas generaciones de cubanos a soñar en grande y alcanzar la excelencia"
+            </blockquote>
+            <cite>— Misión de Cubanos Exitosos</cite>
+        </div>
+        
+        <div class="content-section">
+            <h2>Nuestra Misión</h2>
+            <p>
+                Preservar y celebrar el legado de cubanos exitosos alrededor del mundo, 
+                documentando sus historias, logros y contribuciones a la humanidad. Servimos 
+                como puente entre generaciones, conectando el pasado glorioso con el futuro 
+                prometedor de la comunidad cubana global.
+            </p>
+        </div>
+        
+        <div class="mission-values">
+            
+            <div class="value-box">
+                <h3>Visión</h3>
+                <p>
+                    Ser la plataforma de referencia mundial para historias de éxito cubano, 
+                    inspirando a millones de personas con ejemplos de excelencia, perseverancia 
+                    y talento.
+                </p>
+            </div>
+            
+            <div class="value-box">
+                <h3>Valores</h3>
+                <p>
+                    Excelencia en la investigación, respeto por la verdad histórica, celebración 
+                    de la diversidad del talento cubano y compromiso con la preservación cultural.
+                </p>
+            </div>
+            
+            <div class="value-box">
+                <h3>Integridad</h3>
+                <p>
+                    Cada historia que publicamos está meticulosamente investigada y documentada. 
+                    Nos comprometemos a la veracidad y el rigor periodístico en todo nuestro contenido.
+                </p>
+            </div>
+            
+            <div class="value-box">
+                <h3>Comunidad</h3>
+                <p>
+                    Construimos puentes entre cubanos de todas las generaciones y lugares, 
+                    fomentando el orgullo cultural y las conexiones significativas.
+                </p>
+            </div>
+            
+        </div>
+        
+        <div class="content-section">
+            <h2>¿Por Qué Lo Hacemos?</h2>
+            <p>
+                La historia del éxito cubano es a menudo fragmentada, dispersa y en riesgo de 
+                ser olvidada. Muchos cubanos que han logrado cosas extraordinarias permanecen 
+                desconocidos para las nuevas generaciones. Sus historias de sacrificio, 
+                perseverancia y triunfo merecen ser contadas.
+            </p>
+            <p>
+                Creemos que estas historias tienen el poder de inspirar. Un joven cubano que 
+                lee sobre cómo Gloria Estefan pasó de ser refugiada a superestrella mundial, 
+                o cómo un científico cubano revolucionó la medicina, puede verse reflejado en 
+                esas trayectorias y atreverse a soñar más grande.
+            </p>
+            <p>
+                Esta plataforma es nuestro aporte a la preservación cultural, nuestro regalo 
+                a las futuras generaciones y nuestro homenaje a todos los cubanos que, contra 
+                viento y marea, alcanzaron la excelencia.
+            </p>
+        </div>
+        
+        <div class="team-section">
+            <h2>Nuestro Equipo</h2>
+            <p>
+                Somos historiadores, periodistas, investigadores y amantes de la cultura cubana 
+                unidos por una pasión compartida: contar estas historias extraordinarias.
+            </p>
+            <p>
+                Trabajamos sin fines de lucro, movidos únicamente por el deseo de preservar y 
+                celebrar el legado cubano para las generaciones presentes y futuras.
+            </p>
+        </div>
+        
+        <div class="content-section">
+            <h2>Únete a Nuestra Misión</h2>
+            <p>
+                ¿Conoces a un cubano exitoso cuya historia merece ser contada? ¿Tienes 
+                fotografías, documentos o testimonios que puedan enriquecer nuestro archivo? 
+                ¿Quieres contribuir como escritor o investigador?
+            </p>
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="contact.html" style="display: inline-block; background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%); color: #D4AF7E; padding: 18px 45px; text-decoration: none; font-weight: bold; border: 2px solid #D4AF7E; border-radius: 5px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s;">
+                    Contáctanos
+                </a>
+            </p>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <p><strong>CUBANOS EXITOSOS EN EL MUNDO</strong></p>
+        <p>© 2026 Cubanos Exitosos | Todos los derechos reservados</p>
+    </footer>
+    
+</body>
+</html>
