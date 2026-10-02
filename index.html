@@ -1,355 +1,328 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cubanos Exitosos en el Mundo - Home</title>
+<style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Georgia', serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #0d0d0d;
+            padding: 20px 0;
+            border-bottom: 3px solid #D4AF7E;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #D4AF7E;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: #D4AF7E;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+        
+        nav a:hover {
+            color: #ffffff;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 4em;
+            color: #D4AF7E;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+        
+        header .subtitle {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        
+        header .tagline {
+            font-size: 1.3em;
+            color: #D4AF7E;
+            font-style: italic;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: #2a2a2a;
+            padding: 50px;
+            margin-bottom: 50px;
+            border: 3px solid #D4AF7E;
+            border-radius: 10px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5em;
+            color: #D4AF7E;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #1a3a2e;
+            padding-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #d0d0d0;
+        }
+        
+        /* Main grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+        
+        .main-card {
+            background: linear-gradient(145deg, #2a2a2a 0%, #1f1f1f 100%);
+            padding: 40px;
+            border: 2px solid #D4AF7E;
+            border-radius: 10px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #1a3a2e, #D4AF7E);
+        }
+        
+        .main-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 175, 126, 0.3);
+            border-color: #1a3a2e;
+        }
+        
+        .main-card .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .main-card h3 {
+            font-size: 2em;
+            color: #D4AF7E;
+            margin-bottom: 15px;
+        }
+        
+        .main-card p {
+            color: #d0d0d0;
+            margin-bottom: 25px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        
+        .main-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
+            color: #D4AF7E;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #D4AF7E;
+            transition: all 0.3s;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        
+        .main-card a:hover {
+            background: #D4AF7E;
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: #0d0d0d;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 3px solid #D4AF7E;
+            margin-top: 80px;
+        }
+        
+        footer p {
+            color: #888;
+            margin: 10px 0;
+        }
+        
+        footer strong {
+            color: #D4AF7E;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            nav ul { gap: 15px; font-size: 0.9em; }
+            .main-grid { grid-template-columns: 1fr; }
+        }
+    
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="es"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Cubanos Exitosos en el Mundo - Home&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>* { margin: 0; padding: 0; box-sizing: border-box; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Georgia', serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #1a1a1a;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #e0e0e0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.7;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Navigation */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #0d0d0d;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: sticky;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav .container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav .logo {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav ul {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>list-style: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>nav a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Header */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 80px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 4em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 3px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 3px 3px 6px rgba(0,0,0,0.8);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header .subtitle {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.8em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>header .tagline {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Container */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 50px auto;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Hero section */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #2a2a2a;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 50px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 3px solid #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero h2 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 3px solid #1a3a2e;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.hero p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: justify;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #d0d0d0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Main grid */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-grid {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>gap: 35px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 50px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(145deg, #2a2a2a 0%, #1f1f1f 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card::before {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, #1a3a2e, #D4AF7E);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-10px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 40px rgba(212, 175, 126, 0.3);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #1a3a2e;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card .icon {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 3em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card h3 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2em;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #d0d0d0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: justify;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.05em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px 35px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.main-card a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #1a1a1a;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Footer */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: #0d0d0d;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 50px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-top: 3px solid #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 80px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer p {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #888;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>footer strong {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #D4AF7E;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Responsive */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>header h1 { font-size: 2.5em; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>nav ul { gap: 15px; font-size: 0.9em; }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>.main-grid { grid-template-columns: 1fr; }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="logo"&gt;🇨🇺 Cubanos Exitosos&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="Blog"&gt;Blog&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="newsletter.html"&gt;Newsletter&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="youtube.html"&gt;YouTube&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="tiktok.html"&gt;TikTok&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="libros.html"&gt;Libros&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="revista.html"&gt;Revista&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="contact.html"&gt;Contacto&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;CUBANOS EXITOSOS&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="subtitle"&gt;En el Mundo&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tagline"&gt;🌎 Historias de triunfo que inspiran 🌎&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Celebrando el Éxito Cubano Global&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Desde Silicon Valley hasta las Naciones Unidas, desde Hollywood hasta las grandes<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>ligas del deporte, los cubanos han dejado su huella indeleble en cada rincón del planeta.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>Esta plataforma celebra sus logros, documenta sus historias y preserva el legado de una<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>nación que, aunque pequeña, ha producido gigantes en cada campo del quehacer humano.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Aquí encontrarás las biografías de empresarios visionarios, artistas que revolucionaron<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>la música mundial, científicos que avanzan la frontera del conocimiento, deportistas que<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>conquistaron podios olímpicos, y miles de cubanos que, con talento y perseverancia,<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>alcanzaron la excelencia en sus profesiones.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="main-grid"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;📝&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Blog&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Más de 129 artículos documentados sobre cubanos que han marcado la diferencia.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Biografías profundas, análisis históricos y las historias inspiradoras que<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>merecen ser contadas.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="blog.html"&gt;Leer Blog →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;📧&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Newsletter&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Recibe historias inspiradoras cada semana. Biografías exclusivas, eventos<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>de la comunidad cubana global y contenido único directamente en tu correo.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="newsletter.html"&gt;Suscribirme →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;📺&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;YouTube&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Documentales, entrevistas y contenido audiovisual que da vida a las biografías.<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Las voces y rostros detrás de los grandes logros cubanos.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="youtube.html"&gt;Ver Videos →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;🎵&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;TikTok&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Cápsulas de historia, datos curiosos y contenido viral que celebra el talento<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>cubano. Tu dosis diaria de inspiración en formato corto.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="tiktok.html"&gt;Seguir →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;📚&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Libros Gratuitos&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Descarga libros digitales sobre la historia del éxito cubano, biografías<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>compiladas y recursos educativos sin costo alguno.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="libros.html"&gt;Descargar →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="main-card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="icon"&gt;📰&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Revista Digital&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Publicación trimestral con reportajes especiales, entrevistas extensas<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>y análisis profundos. Ediciones coleccionables en PDF.</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="revista.html"&gt;Ver Revista →&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;CUBANOS EXITOSOS EN EL MUNDO&lt;/strong&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Preservando y celebrando el legado del talento cubano global&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p style="margin-top: 20px; font-size: 0.85em; opacity: 0.7;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>© 2026 Cubanos Exitosos | Todos los derechos reservados</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<nav>
+<div class="container">
+<div class="logo">🇨🇺 Cubanos Exitosos</div>
+<ul>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/index.html">Home</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/Blog">Blog</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/newsletter.html">Newsletter</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/youtube.html">YouTube</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/tiktok.html">TikTok</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/libros.html">Libros</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/revista.html">Revista</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/about.html">About</a></li>
+<li><a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/contact.html">Contacto</a></li>
+</ul>
+</div>
+</nav>
+<header>
+<h1>CUBANOS EXITOSOS</h1>
+<div class="subtitle">En el Mundo</div>
+<div class="tagline">🌎 Historias de triunfo que inspiran 🌎</div>
+</header>
+<div class="container">
+<div class="hero">
+<h2>Celebrando el Éxito Cubano Global</h2>
+<p>
+                Desde Silicon Valley hasta las Naciones Unidas, desde Hollywood hasta las grandes 
+                ligas del deporte, los cubanos han dejado su huella indeleble en cada rincón del planeta. 
+                Esta plataforma celebra sus logros, documenta sus historias y preserva el legado de una 
+                nación que, aunque pequeña, ha producido gigantes en cada campo del quehacer humano.
+            </p>
+<p>
+                Aquí encontrarás las biografías de empresarios visionarios, artistas que revolucionaron 
+                la música mundial, científicos que avanzan la frontera del conocimiento, deportistas que 
+                conquistaron podios olímpicos, y miles de cubanos que, con talento y perseverancia, 
+                alcanzaron la excelencia en sus profesiones.
+            </p>
+</div>
+<div class="main-grid">
+<div class="main-card">
+<span class="icon">📝</span>
+<h3>Blog</h3>
+<p>
+                    Más de 129 artículos documentados sobre cubanos que han marcado la diferencia. 
+                    Biografías profundas, análisis históricos y las historias inspiradoras que 
+                    merecen ser contadas.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/blog.html">Leer Blog →</a>
+</div>
+<div class="main-card">
+<span class="icon">📧</span>
+<h3>Newsletter</h3>
+<p>
+                    Recibe historias inspiradoras cada semana. Biografías exclusivas, eventos 
+                    de la comunidad cubana global y contenido único directamente en tu correo.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/newsletter.html">Suscribirme →</a>
+</div>
+<div class="main-card">
+<span class="icon">📺</span>
+<h3>YouTube</h3>
+<p>
+                    Documentales, entrevistas y contenido audiovisual que da vida a las biografías. 
+                    Las voces y rostros detrás de los grandes logros cubanos.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/youtube.html">Ver Videos →</a>
+</div>
+<div class="main-card">
+<span class="icon">🎵</span>
+<h3>TikTok</h3>
+<p>
+                    Cápsulas de historia, datos curiosos y contenido viral que celebra el talento 
+                    cubano. Tu dosis diaria de inspiración en formato corto.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/tiktok.html">Seguir →</a>
+</div>
+<div class="main-card">
+<span class="icon">📚</span>
+<h3>Libros Gratuitos</h3>
+<p>
+                    Descarga libros digitales sobre la historia del éxito cubano, biografías 
+                    compiladas y recursos educativos sin costo alguno.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/libros.html">Descargar →</a>
+</div>
+<div class="main-card">
+<span class="icon">📰</span>
+<h3>Revista Digital</h3>
+<p>
+                    Publicación trimestral con reportajes especiales, entrevistas extensas 
+                    y análisis profundos. Ediciones coleccionables en PDF.
+                </p>
+<a href="https://439907015-atari-embeds.googleusercontent.com/embeds/4ecafecc1008f433734df9cfcf919023/revista.html">Ver Revista →</a>
+</div>
+</div>
+</div>
+<footer>
+<p><strong>CUBANOS EXITOSOS EN EL MUNDO</strong></p>
+<p>Preservando y celebrando el legado del talento cubano global</p>
+<p style="margin-top: 20px; font-size: 0.85em; opacity: 0.7;">
+            © 2026 Cubanos Exitosos | Todos los derechos reservados
+        </p>
+</footer>
+
 </body>
 </html>
