@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://cubanosexitosos.com/sitemap.xml
+Sitemap: https://cubanosexitosos.com/news-sitemap.xml
