@@ -3,335 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cubanos Exitosos en el Mundo - Home</title>
+<title>CUBA HOY | Octubre 2026</title>
+<meta name="description" content="Archivo de CUBA HOY: ediciones de octubre de 2026. Noticias de Cuba publicadas lunes, miércoles y viernes.">
+<link rel="canonical" href="https://cubanosexitosos.com/cuba-hoy/2026/october/">
+<meta name="robots" content="index, follow">
 <style>
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Georgia', serif;
-            background: #1a1a1a;
-            color: #e0e0e0;
-            line-height: 1.7;
-        }
-        
-        /* Navigation */
-        nav {
-            background: #0d0d0d;
-            padding: 20px 0;
-            border-bottom: 3px solid #D4AF7E;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        nav .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #D4AF7E;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-        
-        nav a {
-            color: #D4AF7E;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 1em;
-        }
-        
-        nav a:hover {
-            color: #ffffff;
-        }
-        
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 4em;
-            color: #D4AF7E;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-        }
-        
-        header .subtitle {
-            font-size: 1.8em;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-        
-        header .tagline {
-            font-size: 1.3em;
-            color: #D4AF7E;
-            font-style: italic;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero section */
-        .hero {
-            background: #2a2a2a;
-            padding: 50px;
-            margin-bottom: 50px;
-            border: 3px solid #D4AF7E;
-            border-radius: 10px;
-        }
-        
-        .hero h2 {
-            font-size: 2.5em;
-            color: #D4AF7E;
-            margin-bottom: 25px;
-            text-align: center;
-            border-bottom: 3px solid #1a3a2e;
-            padding-bottom: 15px;
-        }
-        
-        .hero p {
-            font-size: 1.2em;
-            text-align: justify;
-            margin-bottom: 20px;
-            color: #d0d0d0;
-        }
-        
-        /* Main grid */
-        .main-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 35px;
-            margin: 50px 0;
-        }
-        
-        .main-card {
-            background: linear-gradient(145deg, #2a2a2a 0%, #1f1f1f 100%);
-            padding: 40px;
-            border: 2px solid #D4AF7E;
-            border-radius: 10px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .main-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #1a3a2e, #D4AF7E);
-        }
-        
-        .main-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(212, 175, 126, 0.3);
-            border-color: #1a3a2e;
-        }
-        
-        .main-card .icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-        .main-card h3 {
-            font-size: 2em;
-            color: #D4AF7E;
-            margin-bottom: 15px;
-        }
-        
-        .main-card p {
-            color: #d0d0d0;
-            margin-bottom: 25px;
-            text-align: justify;
-            font-size: 1.05em;
-        }
-        
-        .main-card a {
-            display: inline-block;
-            background: linear-gradient(135deg, #1a3a2e 0%, #0d1f19 100%);
-            color: #D4AF7E;
-            padding: 14px 35px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid #D4AF7E;
-            transition: all 0.3s;
-            border-radius: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9em;
-        }
-        
-        .main-card a:hover {
-            background: #D4AF7E;
-            color: #1a1a1a;
-            transform: scale(1.05);
-        }
-        
-        /* Footer */
-        footer {
-            background: #0d0d0d;
-            padding: 50px 20px;
-            text-align: center;
-            border-top: 3px solid #D4AF7E;
-            margin-top: 80px;
-        }
-        
-        footer p {
-            color: #888;
-            margin: 10px 0;
-        }
-        
-        footer strong {
-            color: #D4AF7E;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5em; }
-            nav ul { gap: 15px; font-size: 0.9em; }
-            .main-grid { grid-template-columns: 1fr; }
-        }
-    
+body{margin:0;background:#1a1a1a;color:#ddd;font-family:Georgia,serif;line-height:1.7}
+.container{max-width:900px;margin:auto;padding:25px}
+header{background:linear-gradient(135deg,#1a3a2e,#0d1f19);padding:55px 20px;text-align:center}
+h1{color:#D4AF7E;font-size:2.7em;margin:0 0 10px}.subtitle{color:#fff;font-size:1.15em}
+.month{background:#242424;border:2px solid #D4AF7E;border-radius:10px;padding:28px;margin:25px 0}
+h2{color:#D4AF7E;margin-top:0}
+ul{list-style:none;padding:0;margin:0}
+li{margin:12px 0}
+a{color:#D4AF7E;text-decoration:none}
+a:hover{text-decoration:underline}
+.date{display:inline-block;min-width:155px;color:#bbb}
+footer{text-align:center;color:#888;padding:35px}
+.back{margin:20px 0;display:inline-block}
 </style>
 </head>
 <body>
-
-<nav>
-<div class="container">
-<div class="logo">🇨🇺 Cubanos Exitosos</div>
-<ul>
-<li><a href="https://cubanosexitosos.com">Home</a></li>
-<li><a href="https://blog.cubanosexitosos.com/">Blog</a></li>
-<li><a href="https://boletin.cubanosexitosos.com/">Newsletter</a></li>
-<li><a href="https://www.youtube.com/@CubanosExitosos/shorts">YouTube</a></li>
-<li><a href="https://cubanosexitosos.com/cuba-hoy/2026/october">CUBA HOY</a></li>
-</ul>
-</div>
-</nav>
 <header>
-<h1>CUBANOS EXITOSOS</h1>
-<div class="subtitle">En el Mundo</div>
-<div class="tagline">🌎 Historias de triunfo que inspiran 🌎</div>
+<h1>CUBA HOY</h1>
+<div class="subtitle">Archivo de Octubre 2026</div>
 </header>
-<div class="container">
-<div class="hero">
-<h2>Celebrando el Éxito Cubano Global</h2>
-<p>
-                Desde Silicon Valley hasta las Naciones Unidas, desde Hollywood hasta las grandes 
-                ligas del deporte, los cubanos han dejado su huella indeleble en cada rincón del planeta. 
-                Esta plataforma celebra sus logros, documenta sus historias y preserva el legado de una 
-                nación que, aunque pequeña, ha producido gigantes en cada campo del quehacer humano.
-            </p>
-<p>
-                Aquí encontrarás las biografías de empresarios visionarios, artistas que revolucionaron 
-                la música mundial, científicos que avanzan la frontera del conocimiento, deportistas que 
-                conquistaron podios olímpicos, y miles de cubanos que, con talento y perseverancia, 
-                alcanzaron la excelencia en sus profesiones.
-            </p>
-</div>
-<div class="main-grid">
-<div class="main-card">
-<span class="icon">📝</span>
-<h3>Blog</h3>
-<p>
-                    Más de 129 artículos documentados sobre cubanos que han marcado la diferencia. 
-                    Biografías profundas, análisis históricos y las historias inspiradoras que 
-                    merecen ser contadas.
-                </p>
-<a href="https://blog.cubanosexitosos.com/">Leer Blog →</a>
-</div>
-<div class="main-card">
-<span class="icon">📧</span>
-<h3>Newsletter</h3>
-<p>
-                    Recibe historias inspiradoras cada semana. Biografías exclusivas, eventos 
-                    de la comunidad cubana global y contenido único directamente en tu correo.
-                </p>
-<a href="https://boletin.cubanosexitosos.com">Suscribirme →</a>
-</div>
-<div class="main-card">
-<span class="icon">📺</span>
-<h3>YouTube</h3>
-<p>
-                    Documentales, entrevistas y contenido audiovisual que da vida a las biografías. 
-                    Las voces y rostros detrás de los grandes logros cubanos.
-                </p>
-<a href="https://www.youtube.com/@CubanosExitosos/shorts"">Ver Videos →</a>
-</div>
-<div class="main-card">
-<span class="icon">🎵</span>
-<h3>TikTok</h3>
-<p>
-                    Cápsulas de historia, datos curiosos y contenido viral que celebra el talento 
-                    cubano. Tu dosis diaria de inspiración en formato corto.
-                </p>
-<a href="https://www.tiktok.com/@dpedroso2023">Seguir →</a>
-</div>
-<div class="main-card">
-<span class="icon">📚</span>
-<h3>Libros Gratuitos</h3>
-<p>
-                    Descarga libros digitales sobre la historia del éxito cubano, biografías 
-                    compiladas y recursos educativos sin costo alguno.
-                </p>
-<a href="libros.html">Descargar →</a>
-</div>
-<div class="main-card">
-<span class="icon">📰</span>
-<h3>Revista Digital</h3>
-<p>
-                    Publicación trimestral con reportajes especiales, entrevistas extensas 
-                    y análisis profundos. Ediciones coleccionables en PDF.
-                </p>
-<a href="https://www.amazon.com/dp/B0DM95WSXY?">Ver Revista →</a>
-</div>
-</div>
-</div>
-<section class="container" style="margin-top:40px; margin-bottom:20px;">
-<div style="text-align:center; padding:25px 20px;">
-<h3 style="color:#D4AF7E; font-size:1.5em; margin-bottom:20px;">Más de Cubanos Exitosos</h3>
-<div style="display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:25px;">
-<a href="https://www.tiktok.com/@dpedroso2023" style="color:#D4AF7E; text-decoration:none; font-weight:bold;">TikTok</a>
-<a href="https://www.amazon.com/stores/author/B0DTP89L97/allbooks?ccs_id=4f47521c-c816-440d-a132-df8d692c4d71" style="color:#D4AF7E; text-decoration:none; font-weight:bold;">Libros</a>
-<a href="https://www.amazon.com/dp/B0DM95WSXY?" style="color:#D4AF7E; text-decoration:none; font-weight:bold;">Revista</a>
-<a href="https://cubanosexitosos.com/about.html" style="color:#D4AF7E; text-decoration:none; font-weight:bold;">About</a>
-<a href="https://forms.gle/eJWaFpi6RSA6Wp266" style="color:#D4AF7E; text-decoration:none; font-weight:bold;">Contacto</a>
-</div>
-</div>
+
+<main class="container">
+<a class="back" href="/cuba-hoy/2026/">← Volver al archivo 2026</a>
+
+<section class="month">
+<h2>Octubre 2026</h2>
+<ul>
+<li><span class="date">Miércoles, 7 de octubre</span> <a href="https://cubanosexitosos.com/2026/october/10-07.html/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Viernes, 9 de octubre</span> <a href="10-09/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Lunes, 12 de octubre</span> <a href="10-12/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Miércoles, 14 de octubre</span> <a href="10-14/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Viernes, 16 de octubre</span> <a href="10-16/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Lunes, 19 de octubre</span> <a href="10-19/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Miércoles, 21 de octubre</span> <a href="10-21/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Viernes, 23 de octubre</span> <a href="10-23/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Lunes, 26 de octubre</span> <a href="10-26/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Miércoles, 28 de octubre</span> <a href="10-28/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+<li><span class="date">Viernes, 30 de octubre</span> <a href="10-30/">CUBA HOY: 5 Noticias que Están Marcando la Jornada</a></li>
+</ul>
 </section>
+</main>
 
 <footer>
-<p><strong>CUBANOS EXITOSOS EN EL MUNDO</strong></p>
-<p>Preservando y celebrando el legado del talento cubano global</p>
-<p style="margin-top: 20px; font-size: 0.85em; opacity: 0.7;">
-            © 2026 Cubanos Exitosos | Todos los derechos reservados
-        </p>
+<strong>CUBANOS EXITOSOS EN EL MUNDO</strong><br>
+Archivo CUBA HOY · 2026
 </footer>
-
 </body>
 </html>
